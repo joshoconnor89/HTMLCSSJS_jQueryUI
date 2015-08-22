@@ -1,0 +1,17 @@
+* {margin:0; padding:0}
+
+body {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; background:#ffffff;}
+
+.wrapper {width:640px; min-height:400px; margin:10px auto; background-color:#FC9;;}
+
+div#reservation {
+	margin:10px;
+	padding:10px;
+	width:600px;
+}
+
+div#reservation p {margin-bottom:10px;}
+
+div#reservation label {width:100px; text-align:right; display:inline-block; line-height:40px; font-size:24px; line-height:30px; margin-right:10px;}
+
+div#reservation input {width:300px; text-align:left; font-size:18px; line-height:30px; padding-left:4px;}

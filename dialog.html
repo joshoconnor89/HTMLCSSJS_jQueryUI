@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dialog Windows</title>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/dialog.css">
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script>
+$(function() {
+    $("#registration-box").dialog({
+
+        autoOpen:false,
+        width:480,
+        modal:true,
+        show:"fade",
+        hide:"fade",
+        resizable:false,
+        buttons:
+            {
+            "Register": function() {
+                $(this).dialog("close");
+                }
+            }
+    });
+
+    $("#register-link").click(function(){
+        $("#registration-box").dialog("open");
+        return false;
+    });
+});
+</script>
+
+
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="header">
+<form id="login">
+<p><label>UserID</label><input name="username" type="text" maxlength="40"></p>
+<p><label>Password</label><input name="password" type="text" maxlength="40"></p>
+<p><label>&nbsp;</label><input id="button" name="login" type="button" value="Log In"></p>
+<p id="register-link">New User/Register</p>
+</form>
+</div><!-- / header div -->
+
+<div id="registration-box" title="New User Registration">
+	<form id="newreg"action="new-registration.php" method="post" enctype="multipart/form-data" name="new_registration">
+     <p id="row">
+   <label>First Name</label><input name="fname" type="text" maxlength="40">
+   <label>Last Name</label><input name="lname" type="text"  maxlength="40">
+    </p>
+    <p id="row">
+    <label>Username</label><input name="username" type="text" maxlength="40">
+    </p>
+    <p id="row">
+    <label>Email</label><input name="email" type="text" maxlength="40">
+    </p>
+    <p id="row"> 
+    <label>Password</label><input name="password" type="password" maxlength="40">
+    </p>
+    <p id="row">
+    <label>Confirm</label><input name="confirm" type="password" maxlength="40">
+    </p>
+    </form>
+
+</div><!-- / registration box -->
+
+
+</div><!-- / wrapper div -->
+</body>
+</html>
